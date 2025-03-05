@@ -17,6 +17,6 @@ public class PaymentInfo {
     private String paymentStatus;
 
     @OneToOne
-    @JoinColumn(name = "order_id")
+    @JoinColumn(name = "order_id", nullable = false)
     private Order order;
 }

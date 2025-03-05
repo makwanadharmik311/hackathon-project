@@ -14,11 +14,11 @@ public class Order {
     private Long orderId;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @Column(nullable = false)
-    private String status;  // Make sure this field exists
+    private String status;
 
     @OneToOne(mappedBy = "order", cascade = CascadeType.ALL)
     private PaymentInfo paymentInfo;

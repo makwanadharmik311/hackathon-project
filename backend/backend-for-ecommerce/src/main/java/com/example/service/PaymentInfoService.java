@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PaymentInfoService {
@@ -13,7 +14,7 @@ public class PaymentInfoService {
     @Autowired
     private PaymentInfoRepository paymentInfoRepository;
 
-    public PaymentInfo savePaymentInfo(PaymentInfo paymentInfo) {
+    public PaymentInfo createPayment(PaymentInfo paymentInfo) {
         return paymentInfoRepository.save(paymentInfo);
     }
 
@@ -21,15 +22,19 @@ public class PaymentInfoService {
         return paymentInfoRepository.findAll();
     }
 
-    public PaymentInfo getPaymentById(Long id) {
-        return paymentInfoRepository.findById(id).orElse(null);
+    public Optional<PaymentInfo> getPaymentById(Long id) {
+        return paymentInfoRepository.findById(id);
     }
 
-    public PaymentInfo updatePaymentInfo(PaymentInfo paymentInfo) {
-        return paymentInfoRepository.save(paymentInfo);
+    public PaymentInfo updatePayment(Long id, PaymentInfo updatedPayment) {
+        return paymentInfoRepository.findById(id).map(payment -> {
+            payment.setPaymentMethod(updatedPayment.getPaymentMethod());
+            payment.setPaymentStatus(updatedPayment.getPaymentStatus());
+            return paymentInfoRepository.save(payment);
+        }).orElseThrow(() -> new RuntimeException("Payment not found"));
     }
 
-    public void deletePaymentInfo(Long id) {
+    public void deletePayment(Long id) {
         paymentInfoRepository.deleteById(id);
     }
 }

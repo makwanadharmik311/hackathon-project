@@ -3,10 +3,10 @@ package com.example.controller;
 import com.example.model.Order;
 import com.example.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/orders")
@@ -20,24 +20,24 @@ public class OrderController {
         return orderService.createOrder(order);
     }
 
-    @GetMapping("/user/{userId}")
-    public List<Order> getOrdersByUser(@PathVariable Long userId) {
-        return orderService.getOrdersByUser(userId);
-    }
-
-    @GetMapping("/")
+    @GetMapping
     public List<Order> getAllOrders() {
         return orderService.getAllOrders();
     }
 
-    @PutMapping("/update")
-    public Order updateOrder(@RequestBody Order order) {
-        return orderService.updateOrder(order);
+    @GetMapping("/{id}")
+    public Optional<Order> getOrderById(@PathVariable Long id) {
+        return orderService.getOrderById(id);
     }
 
-    @DeleteMapping("/delete/{orderId}")
-    public ResponseEntity<?> deleteOrder(@PathVariable Long orderId) {
-        orderService.deleteOrder(orderId);
-        return ResponseEntity.ok().build();
+    @PutMapping("/{id}")
+    public Order updateOrder(@PathVariable Long id, @RequestBody Order updatedOrder) {
+        return orderService.updateOrder(id, updatedOrder);
+    }
+
+    @DeleteMapping("/{id}")
+    public String deleteOrder(@PathVariable Long id) {
+        orderService.deleteOrder(id);
+        return "Order deleted successfully";
     }
 }
