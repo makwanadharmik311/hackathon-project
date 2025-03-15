@@ -1,0 +1,98 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4f4;
+}
+
+/* Header should appear properly */
+header {
+    width: 100%;
+    background: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Profile container */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Header ke niche start hoga */
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Profile card */
+.profile-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+}
+
+/* Profile image */
+.profile-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #333;
+}
+
+/* File input */
+.profile-image input[type="file"] {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Update Picture button */
+.profile-image button {
+    background: #333;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.profile-image button:hover {
+    background: #555;
+}
+
+/* User details */
+h2 {
+    color: #222;
+    margin: 15px 0 5px;
+}
+
+p {
+    color: #555;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Logout button */
+.logout-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #e74c3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.logout-btn:hover {
+    background: #c0392b;
+}
