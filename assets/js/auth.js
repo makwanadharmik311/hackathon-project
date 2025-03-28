@@ -39,6 +39,8 @@ function toggleLanguage() {
             friendDetails: "તમારા વ્યક્તિગત વિગતો સાથે રજીસ્ટર કરો બધો સાઇટ ફીચરનો ઉપયોગ કરવા માટે",
             signupButton: "સાઇન અપ કરો",
             signinButton: "સાઇન ઇન કરો",
+            loginGoogle: "ગૂગલ સાથે લોગિન કરો",
+            signUpGoogle: "ગૂગલ સાથે સાઇન અપ કરો",
             languageText: "English",
         }
     };
@@ -56,6 +58,7 @@ function toggleLanguage() {
     document.getElementById("friend-details").textContent = translations[lang].friendDetails;
     document.getElementById("signup-button").textContent = translations[lang].signupButton;
     document.getElementById("signin-button").textContent = translations[lang].signinButton;
+    //document.getElementById("logGoogle").textContent = translations[lang].loginGoogle;
     languageButton.textContent = translations[lang].languageText;
 
     isEnglish = !isEnglish; // Toggle language state

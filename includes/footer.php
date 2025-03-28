@@ -3,44 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP E-Commerce</title>
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Footer</title>
+    <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 <body>
+    
 
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section about">
-                <h2>About Us</h2>
-                <p>Your one-stop shop for amazing handmade crafts and unique products.</p>
-            </div>
-
-            <div class="footer-section links">
-                <h2>Quick Links</h2>
-                <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="shop.php">Shop</a></li>
-                    <li><a href="contact.php">Contact</a></li>
-                    <li><a href="about.php">About</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section social">
-                <h2>Follow Us</h2>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </div>
+<div class="row">
+        
+    
+        <div class="col">
+            <h3>Office <div class="bottom_line"><span></span></div></h3>
+            <p>Computer Engineering</p>
+            <p>Government Polytechnic, Ahmedabad</p>
+            <p>Gujarat, India</p>
+            <p class="footer_email">tribalart@gamil.com</p>
+            <h4>+91 - 2145958195</h4>
+        </div>
+        <div class="col">
+            <h3>Links <div class="bottom_line"><span></span></div></h3>
+            <ul>
+                <li><a href="http://localhost/php_e-commerce/index.php">HOME</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">SERVICE</a></li>
+                <li><a href="">CONTACT US</a></li>
+            </ul>
+        </div>
+        <div class="col">
+            <h3>Newsletter <div class="bottom_line"><span></span></div></h3>
+            <form>
+                <ion-icon class="icon" name="mail"></ion-icon>
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit"><ion-icon class="icon_right" name="arrow-round-forward"></ion-icon></button>
+            </form>
+            <div class="social_icons">
+                <ion-icon class="social_icon" name="logo-facebook"></ion-icon>
+                <ion-icon class="social_icon" name="logo-whatsapp"></ion-icon>
+                <ion-icon class="social_icon" name="logo-twitter"></ion-icon>
+                <ion-icon class="social_icon" name="logo-instagram"></ion-icon>
             </div>
         </div>
-
-        <div class="footer-bottom">
-            <p>© 2024 My E-Commerce | Designed with ❤️</p>
-        </div>
-    </footer>
-
-</body>
-</html>
+    </div>
+    <hr>
+   <p class="copyright">Tribal Art Ⓒ 2025 - All Rights Reserved</p>
+   </body>
+   </html>
